@@ -69,7 +69,10 @@ Several example sketches are available that show how to use the library. You can
   The status of the last I&sup2;C write transmission. See the [`Wire.endTransmission()` documentation](http://arduino.cc/en/Reference/WireEndTransmission) for return values.
 
 * `VL6180X(void)`<br>
-  Constructor.
+    Constructor.
+
+* `VL6180X(uint8_t inAddress)`<br>
+    Constructor with a non default I&sup2;C address.
 
 * `void setAddress(uint8_t new_addr)`<br>
   Changes the I&sup2;C slave device address of the VL6180X to the given value (7-bit).
@@ -137,7 +140,7 @@ Several example sketches are available that show how to use the library. You can
 
 * `uint16_t readRangeContinuousMillimeters(void)`<br>
   Returns a range reading in millimeters, taking the range scaling setting into account, when continuous mode is active.
-  
+
 * `uint16_t readAmbientContinuous(void)`<br>
   Returns an ambient light reading when continuous mode is active.
 

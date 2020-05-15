@@ -21,6 +21,16 @@ VL6180X::VL6180X(void)
 {
 }
 
+VL6180X::VL6180X(uint8_t inAddress)
+  : address(inAddress)
+  , scaling(0)
+  , ptp_offset(0)
+  , io_timeout(0) // no timeout
+  , did_timeout(false)
+{
+}
+
+
 // Public Methods //////////////////////////////////////////////////////////////
 
 void VL6180X::setAddress(uint8_t new_addr)
